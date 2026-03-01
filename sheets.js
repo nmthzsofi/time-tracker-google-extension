@@ -1,5 +1,5 @@
 const STORAGE_KEYS = {
-  spreadsheetId: "1nYJmOKuaEae3fuv9MHcD22uv6JirZNi5p9nIX8lnMIQ",
+  spreadsheetId: "spreadsheetId",
 };
 
 async function getAuthToken(interactive = true) {

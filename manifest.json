@@ -6,7 +6,7 @@
   "permissions": ["storage", "identity", "sidePanel"],
   "host_permissions": ["https://www.googleapis.com/*"],
   "oauth2": {
-    "client_id": "630714855572-7770ek22m8mu152787q8hng43o060oqv.apps.googleusercontent.com",
+    "client_id": "client_id",
     "scopes": ["https://www.googleapis.com/auth/spreadsheets"]
   },
   "background": {
