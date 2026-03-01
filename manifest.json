@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Side Panel Time Tracker",
+  "version": "1.0.0",
+  "description": "Track time per task and append sessions to Google Sheets.",
+  "permissions": ["storage", "identity", "sidePanel"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "oauth2": {
+    "client_id": "630714855572-7770ek22m8mu152787q8hng43o060oqv.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/spreadsheets"]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Time Tracker"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

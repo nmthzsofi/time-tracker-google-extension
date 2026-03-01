@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Time Tracker</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        margin: 12px;
+      }
+      .time {
+        font-size: 28px;
+        font-variant-numeric: tabular-nums;
+        margin: 12px 0;
+      }
+      button {
+        margin: 6px 6px 6px 0;
+        padding: 8px 10px;
+      }
+      .row {
+        margin-top: 12px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 6px;
+        box-sizing: border-box;
+      }
+      .small {
+        color: #555;
+        font-size: 12px;
+        margin-top: 8px;
+      }
+      .error {
+        color: #b00020;
+      }
+      .ok {
+        color: #0b6;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="margin: 0 0 8px 0">Time Tracker</h2>
+
+    <div class="card">
+      <div class="time" id="time">00:00:00</div>
+
+      <div>
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="end">End</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <div class="small">
+        End will ask you for a task name and then append the session to Google
+        Sheets.
+      </div>
+    </div>
+
+    <div class="card" id="endCard" style="display: none">
+      <label>
+        Task name (what did you do?)
+        <input id="taskName" placeholder="e.g., HubSpot workflow cleanup" />
+      </label>
+
+      <label style="display: block; margin-top: 10px">
+        Type
+        <select
+          id="taskType"
+          style="
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            box-sizing: border-box;
+          "
+        >
+          <option value="University">University</option>
+          <option value="Work">Work</option>
+          <option value="Self study">Self study</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+
+      <div class="row">
+        <button id="save">Save to Google Sheets</button>
+        <button id="cancelSave">Cancel</button>
+      </div>
+
+      <div class="small" id="sessionInfo"></div>
+      <div class="small" id="status"></div>
+    </div>
+
+    <script src="sheets.js"></script>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
